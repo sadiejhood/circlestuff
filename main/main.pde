@@ -1,6 +1,5 @@
 mainChar main = new mainChar();
-int difficulty = 2;
-circle[] centers = new circle[8*difficulty];
+circle[] centers = new circle[20];
 boolean runGame = false;
 boolean quitScreen = false;
 boolean settings = false;
@@ -15,8 +14,8 @@ void draw(){
     setting();
   else if(quitScreen)
     quitScreen();
-  else if(!runGame && !quitScreen)
+  else if(!runGame)
     startScreen();
-  else if(runGame)
+  else
     runGame();
 }

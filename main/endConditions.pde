@@ -7,15 +7,15 @@ void gameOver(){
   text("Hit r to return to homescreen", width/2-100, height / 2 + 30);
   if(key == 'r'){
     runGame = false;
+    quitScreen = false;
   }
 }
 
 boolean haveWon(){
-  for(int i = 0; i < 15; i++){
+  for(int i = 0; i < 20; i++){
     if(centers[i].isAlive)
       return false;
   }
-  
   return true;
 }
 
@@ -26,5 +26,6 @@ void win(){
   text("Hit r to return to homescreen", width/2-100, height / 2 + 30);
   if(key == 'r'){
     runGame = false;
+    quitScreen = false;
   }
 }

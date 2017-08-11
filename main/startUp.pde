@@ -8,26 +8,34 @@ void scoreBoard(){
 }
 
 void populate(){
-  for(int i = 0; i <  8*difficulty; i++){
-    float size = random(10*difficulty);
+  for(int i = 0; i <  16; i++){
+    float size = random(main.curSize);
+    centers[i] = new circle(random(width), random(height), size);
+  }
+  for(int i = 16; i < centers.length; i++){
+    float size = random(main.curSize + 20);
     centers[i] = new circle(random(width), random(height), size);
   }
 }
 
 void runGame(){
-  if(haveWon())
+  if(haveWon()){
+    runGame = true;
     win();
+  }
   else if(main.isAlive){
     scoreBoard();
     main.eat(centers);
     main.move();
-    for(int i = 0; i <  2*difficulty; i++){
+    for(int i = 0; i < centers.length; i++){
       centers[i].eat(centers);
       centers[i].move();
     }
   }
-  else
-    gameOver();  
+  else{
+    runGame = true;
+    gameOver();    
+  }
     
   if(key == 'q'){
     quitScreen = true;

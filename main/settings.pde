@@ -5,7 +5,7 @@ void setting(){
   fill(255);
   text("Would you like to increase difficulty?", width/15, height/3);
   textSize(30);
-  text("Current difficulty: " + difficulty, width/3, height/3 + 40);
+  //text("Current difficulty: " + 20, width/3, height/3 + 40);
   textSize(20);
   
   if(inRect(width*2/3 - 75, height/2, 200, 60)){
@@ -15,8 +15,8 @@ void setting(){
     text("Lower", width*2/3 - 5, height/2 + 35);
     
     if(mousePressed){
-      if(difficulty >= 0)
-         difficulty-=.1; 
+     // if(difficulty >= 0)
+         //difficulty-=.1; 
     }
   }
   else{
@@ -33,9 +33,9 @@ void setting(){
     text("Higher", width/3 - 30, height/2 + 35);  
 
     if(mousePressed){
-      if(difficulty <= 10){
-        difficulty+=1; 
-      }
+      //if(difficulty <= 10){
+        //difficulty+=1; 
+     // }
     }
   }
   else{

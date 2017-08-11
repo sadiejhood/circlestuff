@@ -1,5 +1,9 @@
 void startScreen(){
-  centers = new circle[8*difficulty];
+  runGame = false;
+  quitScreen = false;
+  settings = false;
+   
+  centers = new circle[20];
   populate();
   main = new mainChar();
   fill(255,255,255);
@@ -17,6 +21,8 @@ void startScreen(){
     
     if(mousePressed){
        settings = true; 
+       quitScreen = false;
+       runGame = false;
     }
   }
   else{
@@ -36,6 +42,8 @@ void startScreen(){
     
     if(mousePressed){
        runGame = true;
+       quitScreen = false;
+       settings = false;
     }
   }
   else{
@@ -54,6 +62,8 @@ void startScreen(){
     text("Quit", width / 3 - 125, (height * 2 / 3) + 35);
     if(mousePressed){
      quitScreen = true; 
+     runGame = false;
+     settings = false;
     }
   }
   else{

@@ -11,7 +11,7 @@ class circle{
   circle(float x1, float y1, float size){
     x = x1;
     y = y1;
-    curSize = size*3;
+    curSize = size*2;
     isAlive = true;
     R = random(200);
     G = random(255);
@@ -32,8 +32,8 @@ class circle{
  }
   
   void move(){
-    float speedX = random(3*difficulty);
-    float speedY = random(3*difficulty);
+    float speedX = random(6);
+    float speedY = random(6);
     float moveNumX = 0;
     float moveNumY = 0;
     if(random(2) < 1)

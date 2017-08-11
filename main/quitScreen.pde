@@ -34,13 +34,11 @@ void quitScreen(){
     fill(0);
     text("No", width/3 - 30, height/2 + 35);  
     
-    if(mousePressed && runGame){
+    if(mousePressed && !runGame){
        quitScreen = false;
        runGame = true;
     }
-    if(mousePressed){
-      quitScreen = false;
-    }
+
   }
   else{
     fill(255);

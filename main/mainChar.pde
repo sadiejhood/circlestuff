@@ -6,7 +6,7 @@ class mainChar{
  int score;
  
  mainChar(){
-   curSize = 30;
+   curSize = 60;
    curX = 30;
    curY = 30;
    isAlive = true;
@@ -29,6 +29,14 @@ class mainChar{
      curY = mouseY;
      fill(255,100,0);
      ellipse(curX, curY, curSize, curSize);
+   }
+   else if(haveWon()){
+     runGame = true;
+     win();
+   }
+   else{
+     runGame = true;
+     gameOver(); 
    }
  }
 }
